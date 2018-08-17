@@ -13,7 +13,7 @@ body{
 
 @font-face {
     font-family: 'montserrat';
-    src: url('../font/montserrat.ttf');
+    src: url('../font/montserrat_regular.otf');
 }
 
 
@@ -47,6 +47,15 @@ header{
   padding-top: 30px;
   min-height: 70px;
   border-bottom: #4CAF50 3px solid;
+
+}
+
+.failedLoginheader{
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #66FF0000 3px solid;
 
 }
 
