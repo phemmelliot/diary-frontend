@@ -61,7 +61,23 @@ addFab.onclick = function () {
   addText.innerHTML = 'And here you can pour down your thoughts';
   addTitle.contentEditable = 'true';
   addText.contentEditable = 'true';
+  setTimeout(titleClick, 1);
 };
+
+function titleClick(){
+  addTitle.focus();
+  addTitle.style.cursor = 'pointer';
+  addTitle.onclick = removePlaceHolder;
+  addText.onclick = removeTextPlaceHolder;
+}
+
+function removePlaceHolder(){
+  addTitle.innerHTML = '';
+}
+
+function removeTextPlaceHolder(){
+  addText.innerHTML = '';
+}
 
 closeBtn.onclick = function () {
   addModal.style.display = 'none';

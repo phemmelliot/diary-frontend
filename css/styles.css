@@ -50,14 +50,43 @@ header{
 
 }
 
-.failedLoginheader{
-  background: #35424a;
-  color: #ffffff;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #66FF0000 3px solid;
-
+.errorHeader{
+  background: rgba(76, 175, 80, 0.3);
+  text-align: center;
+  color: #ff0000;
+  padding-top: 0px;
+  min-height: 20px;
 }
+
+.errorHeaderNone{
+  display: none;
+}
+
+.errorText{
+  padding: 0;
+  margin: 0;
+  font-family: 'montserrat';
+  font-weight: normal;
+}
+
+
+.errorClose {
+    color: #ff0000;
+    float: right;
+    font-size: 20px;
+    font-family: 'montserrat';
+    margin-right: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.errorClose:hover,
+.errorClose:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 header h1{
   font-family: 'pacifico';
@@ -258,6 +287,20 @@ footer{
 
 
 /*Login Page*/
+.loader {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/loade.gif') 50% 50% no-repeat;
+}
+
+.loaderNone{
+  display: none;
+}
+
 .login-body{
   background: linear-gradient(
       rgba(53, 66, 74, 0.45),
@@ -268,6 +311,11 @@ footer{
   background-attachment: fixed;
   height: 100%;
   width: 100%;
+  position:absolute;
+}
+
+.loginboxNone{
+  display: none;
 }
 
 .loginbox{
@@ -306,16 +354,19 @@ footer{
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
+  font-family: 'montserrat';
 }
 
  .loginbox p{
    margin: 0;
    padding: 0;
    font-weight: bold;
+   font-family: 'montserrat';
  }
 .loginbox input{
   width:100%;
   margin-bottom: 20px;
+  font-family: 'montserrat';
 }
 
 .loginbox input[type="text"], input[type="password"]{
@@ -326,6 +377,7 @@ footer{
   height: 40px;
   color: #fff;
   font-size: 16px;
+  font-family: 'montserrat';
 }
 
 .loginbox input[type="submit"]{
@@ -338,17 +390,20 @@ footer{
     ),no-repeat;
   color: #fff;
   font-size: 16px;
+  font-family: 'montserrat';
 }
 
 .loginbox input[type="submit"]:hover{
   background: #4CAF50;
   cursor: pointer;
   border: none;
+  font-family: 'montserrat';
 }
 
 .loginbox a{
   text-decoration: none;
   color: #4CAF50;
+  font-family: 'montserrat';
 }
 
 
@@ -398,6 +453,32 @@ footer{
   font-family: 'montserrat';
 }
 
+.errorImage{
+  background: url('../img/errorbg.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
+
+.errorImmageNone{
+  display: none;
+}
+
+.noEntry{
+    height: 200px;
+    width: 400px;
+    font-size: 30px;
+    font-family: 'montserrat';
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
 
 
 
@@ -553,6 +634,7 @@ footer{
 .modal-header {
     padding: 2px 16px;
     background-color: #fefefe;
+    height: 20px;
 }
 
 .modal-body {padding: 2px 16px;}
@@ -561,17 +643,23 @@ footer{
   font-size: 18px;
   font-weight:bold;
   margin: 0;
+  cursor: text;
+  border-radius: 1px;
+  border-radius: 2px solid #0080FF ;
   margin-top: 10px;
   color: #35424a;
-  padding: 0;
+  padding-left: 5px;
+  padding-left: 5px;
   font-family: 'montserrat';
 }
 
 .modal-body .text{
   font-size: 16px;
-  margin: 0;
+  margin-top: 4px;
   padding-top: 3px;
   padding-bottom: 5px;
+  padding-left: 5px;
+  padding-left: 5px;
   font-weight:normal;
   font-family: 'montserrat';
   color: #35424a;
