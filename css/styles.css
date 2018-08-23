@@ -424,6 +424,10 @@ footer{
   margin-bottom: 20px
 }
 
+.inner-box{
+  overflow: auto;
+}
+
 .wrapper > div{
   background: linear-gradient(
       rgba(53, 66, 74, 0.6),
@@ -440,6 +444,9 @@ footer{
   font-weight: 500px;
   font-size: 22px;
   text-align: center;
+  line-height: 2ex;
+  height: 4ex;
+  overflow: hidden;
 }
 
 .wrapper p{
