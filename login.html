@@ -20,16 +20,22 @@
         </nav>
       </div>
     </header>
-    <div class="loginbox">
+    <div class="errorHeaderNone" id="errorHead">
+
+    </div>
+    <div class="loaderNone" id="loadDiv">
+    </div>
+    <div class="loginbox" id="logBox">
       <h1>Login Here</h1>
-      <form action="entries.html">
-        <p>Username</p>
-        <input type="text" name="" placeholder="Enter Username">
+      <form action="entries.html" id="loginUsers">
+        <p>Email</p>
+        <input type="text" name="" placeholder="Enter Username" id="email">
         <p>Password</p>
-        <input type="password" name="" placeholder="Enter Password">
+        <input type="password" name="" placeholder="Enter Password" id="password">
         <input type="submit" name="" value="Login">
         <a href="signup.html">Don't have an account?</a>
       </form>
     </div>
+    <script type="text/javascript" src="./js/login.js"></script>
   </body>
 </html>

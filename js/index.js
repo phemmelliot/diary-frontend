@@ -33,20 +33,20 @@ const saveBtn = document.getElementById('saveBtn');
 const editTitle = document.getElementById('editTitle');
 const editText = document.getElementById('editText');
 
-editBtn.onclick = function(){
+editBtn.onclick = function () {
   editTitle.contentEditable = 'true';
   editText.contentEditable = 'true';
   saveBtn.innerHTML = 'SAVE';
-}
+};
 
-saveBtn.onclick = function(){
+saveBtn.onclick = function () {
   editTitle.contentEditable = 'false';
   editText.contentEditable = 'false';
   modal.style.display = 'none';
-}
+};
 
 
-//This is for a adding a new entry
+// This is for a adding a new entry
 
 const closeBtn = document.getElementById('closeBtn');
 const addSaveBtn = document.getElementById('addSaveBtn');
@@ -55,17 +55,33 @@ const addText = document.getElementById('addText');
 
 const addFab = document.getElementById('addFab');
 
-addFab.onclick = function(){
+addFab.onclick = function () {
   addModal.style.display = 'block';
-  addTitle.innerHTML = "Here goes your title";
-  addText.innerHTML = "And here you can pour down your thoughts";
+  addTitle.innerHTML = 'Here goes your title';
+  addText.innerHTML = 'And here you can pour down your thoughts';
   addTitle.contentEditable = 'true';
   addText.contentEditable = 'true';
+  setTimeout(titleClick, 1);
+};
+
+function titleClick(){
+  addTitle.focus();
+  addTitle.style.cursor = 'pointer';
+  addTitle.onclick = removePlaceHolder;
+  addText.onclick = removeTextPlaceHolder;
 }
 
-closeBtn.onclick = function(){
-  addModal.style.display = 'none';
+function removePlaceHolder(){
+  addTitle.innerHTML = '';
 }
+
+function removeTextPlaceHolder(){
+  addText.innerHTML = '';
+}
+
+closeBtn.onclick = function () {
+  addModal.style.display = 'none';
+};
 
 
 // When the user clicks on <span> (x), close the modal
