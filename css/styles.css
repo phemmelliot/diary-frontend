@@ -197,6 +197,11 @@ footer{
   width: 100%;
 }
 
+.stickyError{
+  position: fixed;
+  width: 100%;
+}
+
 /*Reminder*/
 
  .reminder-container{
@@ -487,8 +492,18 @@ footer{
     margin-left: -200px;
 }
 
-
-
+.gradient{
+  background: linear-gradient(
+      rgba(53, 66, 74, 0.45),
+      rgba(53, 66, 74, 0.45)
+    ), no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
 
 /*Profile Page*/
 
@@ -602,8 +617,10 @@ footer{
     background-color: #fefefe;
     margin: auto;
     padding: 0;
+    overflow: auto;
     border: 1px solid #888;
     width: 40%;
+    max-height: 60%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -706,7 +723,7 @@ footer{
   font-family: 'montserrat';
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .wrapper {
     width: 80%;
     grid-template-columns:repeat(1, 1fr);
@@ -730,7 +747,7 @@ footer{
   }
 
   .modal{
-    padding-top: 20%;
+    padding-top: 80%;
   }
 
   .login-body{
