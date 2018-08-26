@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title></title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="./css/styles.css">
   </head>
-  <body class="login-body">
+  <body>
+    <div class="login-body">
     <header id="myHeader">
       <div class="container">
         <div id="branding">
@@ -26,45 +28,28 @@
         </nav>
       </div>
     </header>
+    <div class="loaderNone" id="gradientBg"></div>
+    <div class="errorHeaderNone" id="errorHead"></div>
+    <div class="loaderNone" id="loader"></div>
     <div class="loginbox" id="form">
       <h1>Your Profile</h1>
       <form action="entries.html">
-        <input type="text" name="" value="Username" readonly>
+        <input type="text" name="" value="Email" readonly id="emailField">
+        <input type="text" name="" value="Username" readonly id="usernameField">
         <p>Set Reminder Below</p>
+        <select class="dropdown dropbtn">
+          <option value="0">No Reminder</option>
+          <option value="1">Every 24 hours</option>
+          <option value="2">Every 12 hours</option>
+          <option value="3">Every 6 hours</option>
+          <option value="4">Every 3 hours</option>
+        </select>
       </form>
-      <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Morning</a>
-              <a href="#">Afternoon</a>
-              <a href="#">Night</a>
-
-            </div>
-          </div>
-
-          <input type="submit" name="" value="Update Changes" formaction="entries.html">
-
+      <input type="submit" name="" value="Update" formaction="entries.html" id="inputUpdate">
+      <button class="editProfile" id="inputEdit">Edit</button>
     </div>
-     <script>
-          function myFunction() {
-              document.getElementById("myDropdown").classList.toggle("show");
-          }
-
-          // Close the dropdown menu if the user clicks outside of it
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
-            }
-          }
-        </script>
+  </div>
+  <script type="text/javascript" src="./js/profile.js"></script>
   </body>
 
 
